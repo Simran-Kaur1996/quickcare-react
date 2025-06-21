@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>QuickCare Patient Check-insss</h1>
+      <h1>QuickCare Patient Check</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
