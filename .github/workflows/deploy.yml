@@ -25,13 +25,13 @@ jobs:
         aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 121955270316.dkr.ecr.us-east-1.amazonaws.com
 
     - name: Build Docker image
-      run: docker build -t quickcare-app .
+      run: docker build -t quickcare-frontend .
 
     - name: Tag Docker image
-      run: docker tag quickcare-app:latest 121955270316.dkr.ecr.us-east-1.amazonaws.com/quickcare-app:latest
+      run: docker tag quickcare-frontend:latest 121955270316.dkr.ecr.us-east-1.amazonaws.com/quickcare-frontend:latest
 
     - name: Push Docker image to ECR
-      run: docker push 121955270316.dkr.ecr.us-east-1.amazonaws.com/quickcare-app:latest
+      run: docker push 121955270316.dkr.ecr.us-east-1.amazonaws.com/quickcare-frontend:latest
 
     - name: Update ECS Service
       run: |
